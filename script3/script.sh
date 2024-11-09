@@ -12,16 +12,16 @@ set -e
 
 containerId=$(docker ps -q)
 if [-n "$containerId"]; then
-    echo "STOPPING CONTAINER!!"
+    echo "STOPPING THE CONTAINER!!!"
     docker stop $containerId
 
-    if [$? -eq 0]
-        echo "REMOVING CONTAINER!!"
+    if[$? -eq 0]; then
+        echo "DELETEING THE CONTAINER!!!"
         docker rm $containerId
     else
-        echo "FAILED TO REMOVE CONTAINER!!"
+        echo "NO CONTAINER STOPPED!!"
     fi
 else
-    echo "NO CONATINER TO STOP!!"
+    echo "NO CONTAINER RUNNING!!!"
 fi
     
