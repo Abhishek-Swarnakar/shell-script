@@ -22,7 +22,7 @@ aws_service=$2
 
 # Check if the required number of arguments are passed   
 
-if [$# -ne 2]; then
+if [ $# -ne 2]; then
     echo "USAGE: $0 <region> <service_name>"
     exit 1
 fi
@@ -51,7 +51,7 @@ fi
 
 # Check if AWS configuration is present.
 
-if [! -d ~/ .aws ]; then
+if [ ! -d ~/.aws ]; then
     echo "AWS CLI is not configured...Configuring now!!"
     aws configure
 else
