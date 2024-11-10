@@ -22,7 +22,7 @@ aws_service=$2
 
 # Check if the required number of arguments are passed   
 
-if [ $# -ne 2]; then
+if [ $# -ne 2 ]; then
     echo "USAGE: $0 <region> <service_name>"
     exit 1
 fi
