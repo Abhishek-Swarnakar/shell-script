@@ -11,5 +11,5 @@ if [ -n "$OLDFILES" ]; then
     echo "$OLDFILES" | xargs rm
     echo "DELETED FILES OLDER THAN 30 DAYS INSIDE DIRECTORY: $DIRECTORY"
 else
-    "NO FILES GREATER THAN 30 DAYS!!"
+    echo "NO FILES GREATER THAN 30 DAYS!!"
 fi
